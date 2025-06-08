@@ -1,0 +1,140 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#nameInput {
+    margin-bottom: 20px;
+}
+
+#nameInput input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    width: 200px;
+}
+
+#nameInput button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#nameInput button:hover {
+    background-color: #ff5722;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.cell {
+   
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-size: 2.5em;
+    color: #333; /* ADD THIS LINE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.cell.played {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.cell.win {
+    background-color: #ffd700 !important;
+    animation: pulse 1s infinite;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #388e3c;
+}
+
+.scoreboard {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 8px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+    }
+}
