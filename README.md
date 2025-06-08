@@ -21,19 +21,20 @@ Smooth transitions and subtle animations enhance the user experience.
 
 ## 🚀 Demo
 
+https://rashi7903.github.io/tic-tac-toe/
 
 ## 💻 How to Run Locally
 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/Rashi7903/tic-tac-toe.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd your-repo
+   cd tic-tac-toe
    ```
 
 3. Open the `index.html` file in your browser.
